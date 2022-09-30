@@ -1,20 +1,27 @@
-import "./App.css";
-import Componente1 from "./components/Componente1";
-import Componente2 from "./components/Componente2";
-import MyContext from "./MyContext";
-import { useState } from "react";
+import React from "react";
+import "./styles.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
-function App() {
-  const [data, setData] = useState(0);
-  const sharedState = { data, setData };
+import Home from "./views/Home";
+import Favoritos from "./views/Favoritos";
+
+import { useState, useEffect, useContext } from "react";
+import { Provider } from "./Context";
+
+export default function App() {
 
   return (
-    <>
-      <MyContext.Provider value={sharedState}>
-        <Componente1></Componente1>
-        <Componente2></Componente2>
-      </MyContext.Provider>
-    </>
+    <div className="App">
+      <Provider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/favoritos" element={<Favoritos />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+    </div>
   );
 }
-export default App;
