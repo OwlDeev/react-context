@@ -6,7 +6,6 @@ import Navbar from "./components/Navbar";
 import Home from "./views/Home";
 import Favoritos from "./views/Favoritos";
 
-import { useState, useEffect, useContext } from "react";
 import { Provider } from "./Context";
 
 export default function App() {

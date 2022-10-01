@@ -8,7 +8,7 @@ export const Provider = ({ children }) => {
   useEffect(() => {
     async function getUser() {
       try {
-        const response = await axios.get("/fotos.json");
+        const response = await axios.get('https://owldeev.github.io/react-context/fotos.json');
         setFotos(response.data.photos);
       } catch (error) {
         console.error(error);

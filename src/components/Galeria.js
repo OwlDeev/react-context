@@ -1,7 +1,6 @@
 import { useContext } from "react";
 
 import "../assets/css/galeria.css";
-import Heart from "./Heart";
 import { Context } from "../Context";
 import Card from "react-bootstrap/Card";
 
