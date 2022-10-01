@@ -16,7 +16,7 @@ export default function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/react-context" element={<Home />} />
             <Route path="/favoritos" element={<Favoritos />} />
           </Routes>
         </BrowserRouter>
